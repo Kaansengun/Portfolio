@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -132,6 +132,7 @@ const experiences = [{
 }];
 export default function Index() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -191,7 +192,7 @@ export default function Index() {
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass border-b">
-        <div className="container mx-auto px-4 py-4 grid grid-cols-3 items-center">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center md:grid md:grid-cols-3">
           <div className="text-xl font-bold text-primary">Kaan Sengun</div>
           <div className="hidden md:flex justify-center space-x-6">
             <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">About</button>
@@ -200,10 +201,32 @@ export default function Index() {
             <button onClick={() => scrollToSection('experience')} className="hover:text-primary transition-colors">Experience</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Contact</button>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end items-center gap-2">
             <ThemeToggle />
+            <button
+              className="md:hidden p-1"
+              onClick={() => setMobileMenuOpen(prev => !prev)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t glass">
+            <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
+              {['about', 'projects', 'skills', 'experience', 'contact'].map(section => (
+                <button
+                  key={section}
+                  onClick={() => { scrollToSection(section); setMobileMenuOpen(false); }}
+                  className="text-left capitalize py-1 hover:text-primary transition-colors"
+                >
+                  {section}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
