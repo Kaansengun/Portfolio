@@ -94,13 +94,13 @@ const skills = [{
   level: 90
 }, {
   name: "UIKit",
-  level: 88
+  level: 80
 }, {
   name: "Core Data",
-  level: 85
+  level: 60
 }, {
   name: "Combine",
-  level: 82
+  level: 60
 }, {
   name: "XCTest",
   level: 80
@@ -164,31 +164,16 @@ export default function Index() {
     setFormErrors([]);
     setSubmitStatus('idle');
     try {
-      const {
-        data,
-        error
-      } = await supabase.functions.invoke('send_contact_email_2026_01_14_15_15', {
-        body: formData
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: { name: formData.name, email: formData.email, message: formData.message },
       });
-      if (error) {
-        console.error('Supabase function error:', error);
-        setFormErrors(['Failed to send message. Please try again.']);
-        setSubmitStatus('error');
-      } else if (data?.error) {
-        console.error('Function returned error:', data.error);
-        if (data.details && Array.isArray(data.details)) {
-          setFormErrors(data.details);
-        } else {
-          setFormErrors([data.error]);
-        }
+      if (error || data?.error) {
+        const msg = data?.error || 'Failed to send message. Please try again.';
+        setFormErrors([msg]);
         setSubmitStatus('error');
       } else {
         setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        });
+        setFormData({ name: '', email: '', message: '' });
       }
     } catch (err) {
       console.error('Unexpected error:', err);
@@ -206,16 +191,18 @@ export default function Index() {
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 grid grid-cols-3 items-center">
           <div className="text-xl font-bold text-primary">Kaan Sengun</div>
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex justify-center space-x-6">
             <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">About</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-primary transition-colors">Projects</button>
             <button onClick={() => scrollToSection('skills')} className="hover:text-primary transition-colors">Skills</button>
             <button onClick={() => scrollToSection('experience')} className="hover:text-primary transition-colors">Experience</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Contact</button>
           </div>
-          <ThemeToggle />
+          <div className="flex justify-end">
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
 
@@ -224,7 +211,7 @@ export default function Index() {
         <div className="container mx-auto text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="relative inline-block mb-8">
-              <img src="https://images.unsplash.com/photo-1661983228690-048b2434c4fb?w=200&auto=format&fit=crop&q=80" alt="Kaan Sengun" className="w-32 h-32 rounded-full mx-auto shadow-lg animate-float" />
+              <img src="/profile.jpg" alt="Kaan Sengun" className="w-32 h-32 rounded-full mx-auto shadow-lg animate-float object-cover" />
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary-glow/20 animate-pulse"></div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent pt-2.5 pb-2.5">
@@ -319,7 +306,7 @@ export default function Index() {
             {skills.map((skill, index) => <div key={skill.name} className="space-y-2">
                 <div className="flex justify-between">
                   <span className="font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground">70%</span>
+                  <span className="text-muted-foreground">{skill.level}%</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-2">
                   <div className="bg-gradient-to-r from-primary to-primary-glow h-2 rounded-full transition-all duration-1000 ease-out" style={{
