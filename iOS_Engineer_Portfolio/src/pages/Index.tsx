@@ -249,7 +249,12 @@ export default function Index() {
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg" className="hover:bg-primary/10 transition-all duration-300" onClick={() => window.open('/Kaan-Sengun-FlowCV-Resume.pdf', '_blank')}>
+              <Button variant="outline" size="lg" className="hover:bg-primary/10 transition-all duration-300" onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Kaan-Sengun-FlowCV-Resume.pdf';
+                link.download = 'Kaan-Sengun-Resume.pdf';
+                link.click();
+              }}>
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </Button>
