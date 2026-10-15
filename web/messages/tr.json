@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Kaan Şengün · Software Engineer",
+    "description": "Swift ve SwiftUI ile native iOS uygulamaları, Next.js ile modern web siteleri geliştiren İstanbul merkezli yazılım mühendisi.",
+    "ogAlt": "Kaan Şengün, Software Engineer"
+  },
+  "nav": {
+    "label": "Ana menü",
+    "home": "Ana sayfa",
+    "projects": "Projeler",
+    "about": "Hakkımda",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil",
+    "switchTo": "English'e geç",
+    "skip": "İçeriğe geç",
+    "logo": "Kaan Şengün, ana sayfa",
+    "photo": "Kaan Şengün"
+  },
+  "contact": {
+    "cta": "Benimle çalış",
+    "title": "İletişim",
+    "close": "Geri dön",
+    "emailLabel": "E-posta",
+    "phoneLabel": "Telefon",
+    "form": {
+      "email": "E-posta adresin",
+      "name": "Ad soyad",
+      "message": "Projeni anlat",
+      "submit": "Gönder",
+      "sending": "Gönderiliyor…",
+      "success": "Mesajın ulaştı, teşekkürler!",
+      "error": "Gönderilemedi. Tekrar dene ya da e-posta at.",
+      "errors": {
+        "email": "Geçerli bir e-posta gir.",
+        "name": "Adını yaz.",
+        "message": "En az 10 karakter yaz."
+      }
+    },
+    "socials": "Sosyal"
+  },
+  "hero": {
+    "line1": "Merhaba, ben <k>Kaan</k>!",
+    "line2": "<k>iOS uygulamaları</k> ve",
+    "line3": "<k>web siteleri</k> yaparım.",
+    "title": "Software Engineer · Swift, SwiftUI ve Next.js",
+    "learnMore": "Daha fazla"
+  },
+  "story": {
+    "label": "Süreç",
+    "lines": {
+      "01": "Her şey bir <k>fikirle</k>",
+      "02": "ve seni <k>dinlemekle</k> başlar…",
+      "03": "Sonra pazarı <k>analiz</k> eder,",
+      "04": "<k>yönü</k> birlikte belirleriz.",
+      "05": "<k>Tasarım</k> şekillenir,",
+      "06": "<k>mimari</k> kurulur.",
+      "07": "Uygulamayı <k>geliştirir</k>,",
+      "08": "<k>test</k> ederim.",
+      "09": "Sonra <k>yayınlarım</k>!",
+      "10": "<k>Bakımı</k> da bende."
+    }
+  },
+  "chat": {
+    "client": "Müşteri",
+    "kaan": "Kaan",
+    "m1": "Merhaba! Tarif keşfetmeyi kolaylaştıran bir iOS uygulaması istiyorum: <k>Dishcover</k>.",
+    "m2": "Harika! Önce ihtiyaçları konuşalım, sonra <k>tasarımı</k> paylaşırım. Onaylarsan <k>geliştirip</k> App Store'a çıkarırım.",
+    "m3": "Süper, ne zaman başlıyoruz? :)",
+    "cta": "Hemen!"
+  },
+  "analysis": {
+    "marketTitle": "Pazar analizi",
+    "market": "Rakipler reklam dolu ve arama odaklı. Keşfetmek yorucu.",
+    "problemTitle": "Problem",
+    "problem": "Kullanıcı ne pişireceğine hızlıca karar veremiyor.",
+    "solution": "Çözüm",
+    "solutionText": "Görsel ağırlıklı, sade bir keşif akışı ve tarif öneren bir AI asistanı."
+  },
+  "design": {
+    "card1Title": "Önce görseller",
+    "card1": "Büyük yemek fotoğrafları karar vermeyi hızlandırır.",
+    "card2Title": "Sıcak ve sade",
+    "card2": "Turuncu vurgu, yumuşak köşeler, az metin.",
+    "screens": "Dishcover uygulama ekranları"
+  },
+  "build": {
+    "card1Title": "SwiftUI + MVVM",
+    "card1": "Modüler ve test edilebilir yapı.",
+    "card2Title": "TestFlight",
+    "card2": "Her sprint sonunda yeni beta.",
+    "screen": "Dishcover tarif adımları ekranı",
+    "code": "SwiftUI kod örneği"
+  },
+  "faq": {
+    "priceTitle": "Ne kadar tutar?",
+    "priceNote": "Projeni anlat, net teklif göndereyim.",
+    "afterTitle": "Peki sonra?",
+    "after": "Web sitelerinde içerik yönetim paneli ve kullanım eğitimi dahil. İçeriği kendin güncellersin.",
+    "relaxTitle": "Sen rahatına bak, gerisi bende",
+    "relax": "Aylık bakım aboneliğiyle güncelleme, güvenlik ve destek bende.",
+    "moreTitle": "Sık sorulanlar",
+    "plans": {
+      "landing": "Landing page",
+      "corporate": "Kurumsal site (5–8 sayfa)",
+      "ios": "iOS uygulaması (MVP)",
+      "custom": "Daha büyük projeler"
+    },
+    "items": {
+      "duration": {
+        "q": "Bir site ne kadar sürede hazır olur?",
+        "a": "Landing page 1–2 hafta, kurumsal site 3–5 hafta. iOS MVP 6–12 hafta."
+      },
+      "selfEdit": {
+        "q": "İçeriği kendim güncelleyebilir miyim?",
+        "a": "Evet. Panel kuruyorum ve teslimde kullanımını birlikte gözden geçiriyoruz."
+      },
+      "maintenance": {
+        "q": "Bakım aboneliğine neler dahil?",
+        "a": "Güvenlik güncellemeleri, hata düzeltmeleri, küçük içerik değişiklikleri ve öncelikli destek."
+      },
+      "payment": {
+        "q": "Ödeme nasıl yapılıyor?",
+        "a": "%50 başlangıçta, %50 teslimde. Büyük projelerde aşamalara bölüyoruz."
+      }
+    }
+  },
+  "caseStudy": {
+    "eyebrow": "Vaka çalışması",
+    "title": "Smart Beauty",
+    "problemTitle": "Problem",
+    "problem": "Cilt değişimini takip etmek zor, kişisel rehberlik yok.",
+    "solutionTitle": "Çözüm",
+    "solution": "AI cilt analizi, kişisel rutinler, değişim takibi.",
+    "contributionTitle": "Katkım",
+    "contribution": "SceneKit ile 3D Body Map, Core ML ile cilt kanseri tespit modeli.",
+    "appStore": "App Store'da gör",
+    "mockups": "Smart Beauty App Store görselleri"
+  },
+  "projects": {
+    "title": "En iyi projelerim",
+    "prev": "Önceki proje",
+    "next": "Sonraki proje",
+    "screenshot": "{title} ekran görüntüsü {n}",
+    "items": {
+      "smartBeauty": {
+        "title": "Smart Beauty",
+        "meta": "iOS · AI cilt analizi",
+        "cta": "App Store'da gör"
+      },
+      "dishcover": {
+        "title": "Dishcover",
+        "meta": "iOS · Tarif keşfi · Kişisel proje",
+        "cta": "Beta'ya katıl"
+      }
+    }
+  },
+  "experience": {
+    "title": "Deneyim",
+    "present": "Günümüz",
+    "kinds": {
+      "ios": "iOS",
+      "freelance": "Freelance"
+    },
+    "intern": "Stajyer",
+    "items": {
+      "bluesense": {
+        "location": "İstanbul · ofiste",
+        "summary": "SceneKit ile 3D Body Map, Core ML ile cilt kanseri tespit modeli."
+      },
+      "orion": {
+        "location": "İstanbul · uzaktan",
+        "summary": "Gerçek zamanlı mesajlaşma: Firebase, push bildirimleri, CallKit ile sesli/görüntülü arama."
+      },
+      "quantumcode": {
+        "location": "Samsun · uzaktan",
+        "summary": "MVVM ile modüler uygulamalar, AI mesaj önerileri, Core Animation ve Lottie."
+      },
+      "alignerr": {
+        "location": "San Francisco · uzaktan",
+        "summary": "AI'ın ürettiği kodu değerlendirip LLM kod üretimini iyileştirme."
+      },
+      "outlier": {
+        "location": "San Francisco · uzaktan",
+        "summary": "LLM eğitimi, code review ve Next.js + TypeScript frontend."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Benimle çalışanlar"
+  },
+  "about": {
+    "name": "KAAN ŞENGÜN",
+    "location": "İstanbul, Türkiye",
+    "lead": "Hızlı, sade ve bakımı kolay uygulamalar geliştiriyorum.",
+    "bio": "KTÜ Yazılım Mühendisliği mezunuyum. Native iOS ve web geliştirme alanında deneyimliyim. OOP, SOLID ve temiz mimariye önem veriyorum; yapay zekâ, görüntü işleme ve veritabanı yönetimi de ilgi alanlarım arasında.",
+    "education": "Karadeniz Teknik Üniversitesi · Yazılım Mühendisliği · GPA 3.30/4.00",
+    "languages": "Türkçe (ana dil) · İngilizce (B2)",
+    "linkedin": "Kariyer yolculuğum (LinkedIn)",
+    "groups": {
+      "mobile": "Mobil",
+      "web": "Web",
+      "design": "Tasarım"
+    }
+  },
+  "footer": {
+    "rights": "© 2026 Kaan Şengün",
+    "linkedin": "LinkedIn profili",
+    "github": "GitHub profili"
+  },
+  "common": {
+    "external": "(yeni sekmede açılır)"
+  }
+}
