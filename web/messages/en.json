@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Kaan Şengün · Software Engineer",
+    "description": "Istanbul-based software engineer building native iOS apps with Swift & SwiftUI and modern websites with Next.js.",
+    "ogAlt": "Kaan Şengün, Software Engineer"
+  },
+  "nav": {
+    "label": "Main menu",
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchTo": "Türkçe'ye geç",
+    "skip": "Skip to content",
+    "logo": "Kaan Şengün, home",
+    "photo": "Kaan Şengün"
+  },
+  "contact": {
+    "cta": "Work with me",
+    "title": "Contact",
+    "close": "Back",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "form": {
+      "email": "Your email",
+      "name": "Full name",
+      "message": "Tell me about your project",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Message received, thank you!",
+      "error": "Couldn't send. Try again or email me.",
+      "errors": {
+        "email": "Enter a valid email.",
+        "name": "Enter your name.",
+        "message": "Write at least 10 characters."
+      }
+    },
+    "socials": "Social"
+  },
+  "hero": {
+    "line1": "Hi, I'm <k>Kaan</k>!",
+    "line2": "I build <k>iOS apps</k>",
+    "line3": "and <k>websites</k>.",
+    "title": "Software Engineer · Swift, SwiftUI & Next.js",
+    "learnMore": "Learn more"
+  },
+  "story": {
+    "label": "Process",
+    "lines": {
+      "01": "It all starts with an <k>idea</k>",
+      "02": "and me <k>listening</k>…",
+      "03": "Then we <k>analyze</k> the market",
+      "04": "and set a <k>direction</k>.",
+      "05": "The <k>design</k> takes shape,",
+      "06": "the <k>architecture</k> follows.",
+      "07": "I <k>build</k> the app",
+      "08": "and <k>test</k> it.",
+      "09": "Then I <k>ship</k> it!",
+      "10": "<k>Maintenance</k>? On me."
+    }
+  },
+  "chat": {
+    "client": "Client",
+    "kaan": "Kaan",
+    "m1": "Hi! I want an iOS app that makes discovering recipes easy: <k>Dishcover</k>.",
+    "m2": "Great! Let's talk needs first, then I'll share the <k>design</k>. Once you approve, I'll <k>build</k> it and ship it to the App Store.",
+    "m3": "Perfect, when do we start? :)",
+    "cta": "Now!"
+  },
+  "analysis": {
+    "marketTitle": "Market analysis",
+    "market": "Competitors are ad-heavy and search-driven. Browsing is tiring.",
+    "problemTitle": "Problem",
+    "problem": "Users can't decide quickly what to cook.",
+    "solution": "Solution",
+    "solutionText": "A visual, clean discovery flow and an AI assistant that suggests recipes."
+  },
+  "design": {
+    "card1Title": "Visuals first",
+    "card1": "Big food photos make decisions faster.",
+    "card2Title": "Warm and simple",
+    "card2": "Orange accents, soft corners, little text.",
+    "screens": "Dishcover app screens"
+  },
+  "build": {
+    "card1Title": "SwiftUI + MVVM",
+    "card1": "Modular, testable structure.",
+    "card2Title": "TestFlight",
+    "card2": "A new beta after every sprint.",
+    "screen": "Dishcover recipe steps screen",
+    "code": "SwiftUI code sample"
+  },
+  "faq": {
+    "priceTitle": "How much does it cost?",
+    "priceNote": "Tell me about your project and I'll send a clear quote.",
+    "afterTitle": "And after?",
+    "after": "Websites include a content management panel and training, so you can update content yourself.",
+    "relaxTitle": "Relax, I've got it covered",
+    "relax": "A monthly maintenance plan keeps updates, security and support on me.",
+    "moreTitle": "FAQ",
+    "plans": {
+      "landing": "Landing page",
+      "corporate": "Business website (5–8 pages)",
+      "ios": "iOS app (MVP)",
+      "custom": "Larger projects"
+    },
+    "items": {
+      "duration": {
+        "q": "How long does a website take?",
+        "a": "Landing page 1–2 weeks, business website 3–5 weeks. iOS MVP 6–12 weeks."
+      },
+      "selfEdit": {
+        "q": "Can I update the content myself?",
+        "a": "Yes. I set up a panel and we go through it together at handover."
+      },
+      "maintenance": {
+        "q": "What does maintenance include?",
+        "a": "Security updates, bug fixes, small content changes and priority support."
+      },
+      "payment": {
+        "q": "How does payment work?",
+        "a": "50% upfront, 50% on delivery. Larger projects are split into milestones."
+      }
+    }
+  },
+  "caseStudy": {
+    "eyebrow": "Case study",
+    "title": "Smart Beauty",
+    "problemTitle": "Problem",
+    "problem": "Hard to track skin changes, no personal guidance.",
+    "solutionTitle": "Solution",
+    "solution": "AI skin analysis, personal routines, change tracking.",
+    "contributionTitle": "My part",
+    "contribution": "3D Body Map with SceneKit, skin cancer detection model with Core ML.",
+    "appStore": "View on the App Store",
+    "mockups": "Smart Beauty App Store images"
+  },
+  "projects": {
+    "title": "My best projects",
+    "prev": "Previous project",
+    "next": "Next project",
+    "screenshot": "{title} screenshot {n}",
+    "items": {
+      "smartBeauty": {
+        "title": "Smart Beauty",
+        "meta": "iOS · AI skin analysis",
+        "cta": "View on the App Store"
+      },
+      "dishcover": {
+        "title": "Dishcover",
+        "meta": "iOS · Recipe discovery · Personal project",
+        "cta": "Join beta"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "kinds": {
+      "ios": "iOS",
+      "freelance": "Freelance"
+    },
+    "intern": "Intern",
+    "items": {
+      "bluesense": {
+        "location": "Istanbul · on-site",
+        "summary": "3D Body Map with SceneKit, skin cancer detection model with Core ML."
+      },
+      "orion": {
+        "location": "Istanbul · remote",
+        "summary": "Real-time messaging: Firebase, push notifications, voice/video calls with CallKit."
+      },
+      "quantumcode": {
+        "location": "Samsun · remote",
+        "summary": "Modular MVVM apps, AI message suggestions, Core Animation and Lottie."
+      },
+      "alignerr": {
+        "location": "San Francisco · remote",
+        "summary": "Reviewing AI-generated code to improve LLM code generation."
+      },
+      "outlier": {
+        "location": "San Francisco · remote",
+        "summary": "LLM training, code review and Next.js + TypeScript frontends."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "They trusted me"
+  },
+  "about": {
+    "name": "KAAN ŞENGÜN",
+    "location": "Istanbul, Türkiye",
+    "lead": "I build fast, clean, maintainable apps.",
+    "bio": "I'm a Software Engineering graduate from Karadeniz Technical University with experience in native iOS and web development. I care about OOP, SOLID and clean architecture, with a background in AI, image processing and database management.",
+    "education": "Karadeniz Technical University · Software Engineering · GPA 3.30/4.00",
+    "languages": "Turkish (native) · English (B2)",
+    "linkedin": "My journey (LinkedIn)",
+    "groups": {
+      "mobile": "Mobile",
+      "web": "Web",
+      "design": "Design"
+    }
+  },
+  "footer": {
+    "rights": "© 2026 Kaan Şengün",
+    "linkedin": "LinkedIn profile",
+    "github": "GitHub profile"
+  },
+  "common": {
+    "external": "(opens in a new tab)"
+  }
+}
