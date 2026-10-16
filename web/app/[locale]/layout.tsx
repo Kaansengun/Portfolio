@@ -26,6 +26,8 @@ export function generateStaticParams() {
 
 export const viewport: Viewport = {
   themeColor: "#ffffff",
+  // Lets env(safe-area-inset-*) work so the floating button clears the iPhone home indicator.
+  viewportFit: "cover",
 };
 
 export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {

@@ -159,6 +159,9 @@ export function SideMenu() {
         <Socials className="mt-auto" />
       </aside>
 
+      {/* Mobile: a light bar behind the photo and hamburger so content doesn't collide with them */}
+      <div aria-hidden className="pointer-events-none fixed inset-x-0 top-0 z-30 h-20 bg-gradient-to-b from-surface via-surface/85 to-transparent lg:hidden" />
+
       {/* Mobile: photo + hamburger */}
       <a href="#home" onClick={go("home")} aria-label={t("logo")} className="fixed top-4 left-4 z-40 lg:hidden">
         <Avatar className="size-12 shadow-soft" />

@@ -157,13 +157,16 @@ section[id] {
 .typed {
   position: relative;
   display: inline-block;
+  /* Hide the mask once it has slid past the text (a few px stay visible for the caret) */
+  clip-path: inset(-0.4em -3px -0.4em -0.3em);
 }
+/* The mask slides right with transform (no layout shift); its left edge is the caret */
 .typed-mask {
   position: absolute;
   top: -4%;
-  right: -0.15em;
   bottom: 2%;
-  width: calc(100% + 0.3em);
+  left: 0;
+  width: calc(100% + 4px);
   background: var(--mask, var(--bg));
   border-left: 2px solid var(--accent);
   animation:
@@ -178,7 +181,7 @@ section[id] {
 }
 @keyframes type-out {
   to {
-    width: 0;
+    transform: translateX(calc(100% - 4px));
   }
 }
 @keyframes caret {

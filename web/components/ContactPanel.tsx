@@ -22,6 +22,18 @@ export function ContactPanel() {
   const [errors, setErrors] = useState<Partial<Record<Field, string>>>({});
   // Like a call to action at the end of the story: the button grows once About is on screen.
   const [spotlight, setSpotlight] = useState(false);
+  // Phones: the floating button waits until the hero has scrolled away, so it doesn't cover it.
+  const [pastHero, setPastHero] = useState(false);
+
+  useEffect(() => {
+    const hero = document.getElementById("home");
+    if (!hero) return;
+    const observer = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting), {
+      rootMargin: "0px 0px -40% 0px",
+    });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
   // "Benimle çalış" → "Benimle / çalış", "Work with me" → "Work / with me"
   const [ctaFirst, ...ctaRest] = t("cta").split(" ");
 
@@ -101,11 +113,11 @@ export function ContactPanel() {
         onClick={openContact}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className={`group fixed right-4 bottom-4 z-40 overflow-hidden rounded-[5px] bg-accent px-5 py-3 text-left text-tint shadow-lift [transition:top_.7s_var(--ease-out-soft),transform_.7s_var(--ease-out-soft),background-color_.1s] hover:bg-[#000036] sm:right-6 sm:bottom-6 lg:top-[45px] lg:right-[70px] lg:bottom-auto lg:origin-top-right lg:py-[5px] lg:pr-[45px] lg:pl-[25px] lg:shadow-none ${
-          spotlight ? "lg:top-[40vh] lg:scale-[1.35]" : ""
-        }`}
+        className={`group fixed right-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-40 overflow-hidden rounded-[5px] bg-accent px-4 py-2.5 text-left text-tint shadow-lift [transition:top_.7s_var(--ease-out-soft),transform_.5s_var(--ease-out-soft),opacity_.3s,background-color_.1s] hover:bg-[#000036] sm:right-6 sm:bottom-6 lg:top-[45px] lg:right-[70px] lg:bottom-auto lg:origin-top-right lg:py-[5px] lg:pr-[45px] lg:pl-[25px] lg:shadow-none ${
+            spotlight ? "lg:top-[40vh] lg:scale-[1.35]" : ""
+        } ${pastHero ? "" : "max-lg:pointer-events-none max-lg:translate-y-[200%] max-lg:opacity-0"}`}
       >
-        <span className="relative z-10 block text-lg leading-tight font-bold lg:text-2xl lg:leading-9">
+        <span className="relative z-10 block text-[15px] leading-tight font-bold lg:text-2xl lg:leading-9">
           {ctaFirst}
           <br className="hidden lg:block" />
           <span className="lg:hidden"> </span>

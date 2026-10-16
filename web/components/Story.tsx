@@ -23,7 +23,26 @@ import {
 const k = (chunks: ReactNode) => <span className="font-medium text-accent">{chunks}</span>;
 
 /** Each stage leaves room at the top for the fixed 01–10 heading. */
-const stageClass = "relative px-4 pt-36 pb-16 sm:px-10 lg:px-16 lg:pt-44";
+const stageClass = "relative px-4 pt-20 pb-12 sm:px-10 lg:px-16 lg:pt-44 lg:pb-16";
+
+/**
+ * Phones: the stage's two numbered lines sit at the top of the section instead of in a
+ * fixed heading that would cover the content.
+ */
+function StageLines({ lines }: { lines: readonly [string, string] }) {
+  const t = useTranslations("story");
+  return (
+    <p data-anim="up" className="mb-8 font-display lg:hidden">
+      <span className="sr-only">{t("label")}: </span>
+      {lines.map((n) => (
+        <span key={n} className="flex items-baseline gap-3 font-display-bold text-xl leading-8 font-bold">
+          <span className="w-7 font-display text-lg font-thin text-faint">{n}</span>
+          <span>{t.rich(`lines.${n}`, { k: (chunks) => <span className="text-accent">{chunks}</span> })}</span>
+        </span>
+      ))}
+    </p>
+  );
+}
 
 /* ---------------------------------------------------------------- 01–02 idea */
 
@@ -33,6 +52,7 @@ function StoryIdea() {
 
   return (
     <section id="story-idea" className={stageClass}>
+      <StageLines lines={["01", "02"]} />
       <div className="mx-auto max-w-5xl space-y-8">
         <div data-anim="left" data-anim-start="top 75%" className="flex items-center gap-3 pr-6 sm:gap-5 sm:pr-40">
           <span aria-hidden className="grid size-12 shrink-0 place-items-center rounded-full bg-mint text-xl font-light text-emerald-900 sm:size-[60px] sm:text-2xl">
@@ -79,6 +99,7 @@ function StoryAnalysis() {
   const t = useTranslations("analysis");
   return (
     <section id="story-analysis" className={stageClass}>
+      <StageLines lines={["03", "04"]} />
       <div data-anim="scale" className="mx-auto max-w-4xl">
         <div data-anim="lines" className="grid gap-10 sm:grid-cols-2">
           {([
@@ -116,8 +137,9 @@ function StoryDesign() {
   const t = useTranslations("design");
   return (
     <section id="story-design" className={stageClass}>
+      <StageLines lines={["05", "06"]} />
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_15rem]">
-        <div role="img" aria-label={t("screens")} className="relative flex items-center justify-center gap-3 rounded-[2rem] bg-gradient-to-br from-blush via-surface to-accent-soft px-4 py-12 sm:gap-6 sm:py-16">
+        <div role="img" aria-label={t("screens")} className="relative flex items-center justify-center gap-2 overflow-hidden rounded-[2rem] bg-gradient-to-br from-blush via-surface to-accent-soft px-3 py-10 sm:gap-6 sm:px-4 sm:py-16">
           <div data-parallax="40" className="w-[29%] max-w-[13rem]">
             <PhoneFrame src={designScreens[0]} alt="" sizes="(min-width: 1024px) 208px, 29vw" className="w-full" />
           </div>
@@ -179,8 +201,9 @@ function StoryBuild() {
   const lines = code.split("\n");
   return (
     <section id="story-build" className={stageClass}>
+      <StageLines lines={["07", "08"]} />
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.5fr_1fr]">
-        <div>
+        <div className="min-w-0">
           <figure data-anim="up" className="overflow-hidden rounded-2xl bg-surface shadow-lift">
             <div className="flex items-center gap-1.5 border-b border-line px-4 py-3">
               <span className="size-3 rounded-full bg-red-400" />
@@ -188,7 +211,7 @@ function StoryBuild() {
               <span className="size-3 rounded-full bg-emerald-400" />
               <span className="ml-3 font-mono text-xs text-muted">RecipeListView.swift</span>
             </div>
-            <pre aria-label={t("code")} data-anim="lines" data-anim-start="top 75%" className="overflow-x-auto p-4 font-mono text-[11px] leading-6 sm:p-6 sm:text-[13px]">
+            <pre aria-label={t("code")} data-anim="lines" data-anim-start="top 75%" className="overflow-x-auto p-4 font-mono text-[10.5px] leading-6 sm:p-6 sm:text-[13px]">
               <code>
                 {lines.map((line, i) => (
                   <span key={i} data-line className="flex gap-4">
@@ -214,7 +237,7 @@ function StoryBuild() {
             ))}
           </ul>
         </div>
-        <div data-anim="up" data-anim-start="top 90%" className="mx-auto w-[55%] max-w-[16rem] lg:w-full">
+        <div data-anim="up" data-anim-start="top 90%" className="mx-auto w-[60%] max-w-[16rem] min-w-0 lg:w-full">
           <div data-parallax="-50">
             <PhoneFrame src={buildScreen} alt={t("screen")} sizes="(min-width: 1024px) 256px, 55vw" className="w-full" />
           </div>
@@ -237,11 +260,11 @@ function StoryLaunch() {
       title: t("priceTitle"),
       body: (
         <>
-          <dl className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-1.5">
+          <dl className="grid gap-y-3 sm:grid-cols-[1fr_auto] sm:gap-x-6 sm:gap-y-1.5">
             {plans.map((plan) => (
-              <div key={plan.id} className="contents">
-                <dt>{t(`plans.${plan.id}`)}</dt>
-                <dd className="text-right font-medium whitespace-nowrap">{plan.price[locale]}</dd>
+              <div key={plan.id} className="sm:contents">
+                <dt className="text-base text-muted sm:text-[inherit] sm:text-ink">{t(`plans.${plan.id}`)}</dt>
+                <dd className="font-medium sm:text-right sm:whitespace-nowrap">{plan.price[locale]}</dd>
               </div>
             ))}
           </dl>
@@ -264,6 +287,7 @@ function StoryLaunch() {
 
   return (
     <section id="story-launch" className={stageClass}>
+      <StageLines lines={["09", "10"]} />
       <div className="mx-auto max-w-5xl">
         <div data-anim="lines">
           {rows.map(({ id, Icon, title, body }) => (

@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const k = (chunks: ReactNode) => <span className="text-accent">{chunks}</span>;
 
 /**
- * The fixed "01 … 10" heading. Each story stage owns two numbered lines; when a
+ * The fixed "01 … 10" heading (desktop only; on phones each stage shows its lines inline, see Story.tsx). Each story stage owns two numbered lines; when a
  * stage scrolls into view its lines type in, like a code editor moving down the file.
  */
 export function StoryTitle() {
@@ -40,7 +40,7 @@ export function StoryTitle() {
   return (
     <div
       aria-hidden={stage === null}
-      className={`pointer-events-none fixed top-[4.5rem] right-4 left-4 z-30 transition-all duration-500 ease-out-soft sm:right-auto lg:top-10 lg:left-[calc(var(--rail)+3.5rem)] ${
+      className={`pointer-events-none fixed top-10 left-[calc(var(--rail)+3.5rem)] z-30 hidden transition-all duration-500 ease-out-soft lg:block ${
         stage ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
       }`}
     >
